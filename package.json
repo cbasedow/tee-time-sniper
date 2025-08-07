@@ -5,12 +5,15 @@
 	"private": true,
 	"scripts": {
 		"dev": "bun --watch src/index.ts",
-		"start": "bun src/index.ts"
+		"start": "bun src/index.ts",
+		"check": "biome check",
+		"check:fix": "biome check --write --unsafe"
 	},
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
-  }
+	"devDependencies": {
+		"@biomejs/biome": "2.1.4",
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	}
 }
