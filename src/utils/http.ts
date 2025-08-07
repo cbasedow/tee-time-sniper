@@ -93,3 +93,9 @@ export function fetchWithRetry(
 
 	return executeFetchWithRetry(0);
 }
+
+export function parseResponseJson<T>(response: Response): ResultAsync<T, Error> {
+	return ResultAsync.fromPromise(response.json() as Promise<T>, (error) =>
+		toError(error, "Failed to parse response body as JSON"),
+	);
+}
