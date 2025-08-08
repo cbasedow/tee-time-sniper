@@ -129,7 +129,17 @@ export function startTeeTimeSniper({
 				process.exit(1);
 			}
 
-			logger.info("Successfully booked reservation");
+			const { time } = bookReservationResult.value;
+
+			logger.info(
+				{
+					time,
+					totalPlayers,
+					totalPriceUsd,
+				},
+				"Successfully booked reservation",
+			);
+
 			process.exit(0);
 		},
 	);
