@@ -20,6 +20,7 @@ export const SUNKEN_MEADOW_CONFIG = {
 		WEEKEND: 33,
 		WEEKEND_TWILIGHT: 23,
 	},
+	TWILIGHT_START_TIME: "1600",
 	GREEN_FEE_TAX: 0,
 	TOTAL_PLAYERS_ARRAY: [1, 2, 3, 4],
 	TOTAL_HOLES: 18,
@@ -105,7 +106,7 @@ export const SUNKEN_MEADOW_CONFIG = {
 		"1739",
 		"1748",
 		"1757",
-	],
+	] as const,
 } as const;
 
 export type TotalPlayers = (typeof SUNKEN_MEADOW_CONFIG.TOTAL_PLAYERS_ARRAY)[number];
