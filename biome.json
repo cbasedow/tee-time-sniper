@@ -1,0 +1,117 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.1.4/schema.json",
+	"vcs": {
+		"enabled": false,
+		"clientKind": "git"
+	},
+	"files": {
+		"ignoreUnknown": true,
+		"includes": ["src/**/*", "biome.json", "package.json", "tsconfig.json"]
+	},
+	"formatter": {
+		"enabled": true,
+		"formatWithErrors": false,
+		"indentStyle": "tab",
+		"indentWidth": 2,
+		"lineWidth": 100,
+		"lineEnding": "lf"
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"complexity": {
+				"noForEach": "error",
+				"noUselessStringConcat": "error",
+				"noVoid": "error",
+				"useSimplifiedLogicExpression": "error",
+				"useWhile": "error"
+			},
+			"nursery": {
+				"noImplicitCoercion": "error",
+				"noTsIgnore": "error",
+				"noUselessEscapeInString": "error",
+				"noUselessUndefined": "error",
+				"useNumericSeparators": "error",
+				"useObjectSpread": "error",
+				"useParseIntRadix": "error"
+			},
+			"performance": {
+				"noDelete": "error",
+				"useTopLevelRegex": "error"
+			},
+			"style": {
+				"noEnum": "error",
+				"noNamespace": "error",
+				"noImplicitBoolean": "error",
+				"noInferrableTypes": "error",
+				"noNegationElse": "error",
+				"noNestedTernary": "error",
+				"noParameterAssign": "error",
+				"noParameterProperties": "error",
+				"noShoutyConstants": "error",
+				"noSubstr": "error",
+				"noUnusedTemplateLiteral": "error",
+				"noUselessElse": "error",
+				"noYodaExpression": "error",
+				"useAsConstAssertion": "error",
+				"useAtIndex": "error",
+				"useBlockStatements": "error",
+				"useCollapsedElseIf": "error",
+				"useCollapsedIf": "error",
+				"useConsistentArrayType": {
+					"level": "error",
+					"options": {
+						"syntax": "shorthand"
+					},
+					"fix": "unsafe"
+				},
+				"useConsistentCurlyBraces": "error",
+				"useDefaultParameterLast": "error",
+				"useDefaultSwitchClause": "error",
+				"useExplicitLengthCheck": "error",
+				"useFilenamingConvention": {
+					"level": "error",
+					"options": {
+						"strictCase": true,
+						"requireAscii": true,
+						"filenameCases": ["kebab-case"]
+					}
+				},
+				"useForOf": "error",
+				"useFragmentSyntax": "error",
+				"useNumberNamespace": "error",
+				"useShorthandAssign": "error",
+				"useSingleVarDeclarator": "error",
+				"useThrowNewError": "error",
+				"useThrowOnlyError": "error",
+				"useTrimStartEnd": "error"
+			},
+			"suspicious": {
+				"noEmptyBlockStatements": "error",
+				"useAwait": "error",
+				"useErrorMessage": "error",
+				"useNumberToFixedDigitsArgument": "error"
+			}
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"arrowParentheses": "always",
+			"bracketSpacing": true,
+			"jsxQuoteStyle": "double",
+			"quoteStyle": "double",
+			"semicolons": "always",
+			"trailingCommas": "all"
+		},
+		"globals": ["Bun"]
+	},
+	"assist": {
+		"enabled": true,
+		"actions": {
+			"source": {
+				"organizeImports": "on"
+			}
+		}
+	}
+}
