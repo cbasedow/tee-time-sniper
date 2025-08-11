@@ -1,3 +1,4 @@
 import { env } from "./env";
+import { logger } from "./utils/logger";
 
-console.log(`Hello via Bun in ${env.NODE_ENV} mode!`);
+logger.info(`Hello via Bun in ${env.NODE_ENV} mode!`);
